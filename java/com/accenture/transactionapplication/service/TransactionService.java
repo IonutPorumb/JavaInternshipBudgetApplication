@@ -1,8 +1,8 @@
-package com.accenture.transactionapplication.service;
+package com.accentureapplication.service;
 
-import com.accenture.transactionapplication.model.ActionType;
-import com.accenture.transactionapplication.model.Transaction;
-import com.accenture.transactionapplication.repository.TransactionRepository;
+import com.accentureapplication.model.ActionType;
+import com.accentureapplication.repository.TransactionRepository;
+import com.accentureapplication.model.Transaction;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

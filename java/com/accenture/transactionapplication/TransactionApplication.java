@@ -1,4 +1,4 @@
-package com.accenture.transactionapplication;
+package com.accentureapplication;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
