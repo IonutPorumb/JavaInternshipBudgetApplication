@@ -59,7 +59,7 @@ public class TransactionService {
                 .orElseThrow(NoSuchElementException::new));
     }
 
-//      POST /transactions - adds a new transaction
+    //      POST /transactions - adds a new transaction
     public ResponseEntity<Transaction> createTransaction(Transaction transaction) {
         int newId = transactionRepository.getTransactions().size();
         Transaction savedTransaction = new Transaction(newId, transaction.getProduct(), LocalDateTime.now(),
@@ -68,7 +68,7 @@ public class TransactionService {
         return ResponseEntity.created(URI.create("/" + newId)).body(savedTransaction);
     }
 
-//    PUT  /transactions/{id} - replaces the transaction with id
+    //    PUT  /transactions/{id} - replaces the transaction with id
     public ResponseEntity<Transaction> updateTransactionDataById(Integer id, Transaction transaction) {
         List<Transaction> transactions = transactionRepository.getTransactions();
         ResponseEntity<Transaction> transactionToBeUpdated = ResponseEntity.ok(transactions.stream()
@@ -82,7 +82,7 @@ public class TransactionService {
         return ResponseEntity.created(URI.create("/" + id)).body(updatedTransaction);
     }
 
-//      DELETE /transactions/{id} - deletes the transaction with id
+    //      DELETE /transactions/{id} - deletes the transaction with id
     public ResponseEntity<Transaction> deleteTransactionById(Integer id) {
         List<Transaction> transactions = transactionRepository.getTransactions();
         ResponseEntity<Transaction> transactionToBeDeleted = ResponseEntity.ok(transactions.stream()

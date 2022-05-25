@@ -27,26 +27,26 @@ public class TransactionController {
         return transactionService.getAllTransactionFiltered(product, type, minAmount, maxAmount);
     }
 
-//    GET /transactions/{id} - get transaction with id
+    //    GET /transactions/{id} - get transaction with id
     @GetMapping("/{id}")
     public ResponseEntity<Transaction> getTransactionById(@PathVariable Integer id) {
         return transactionService.getTransactionById(id);
     }
 
-//      POST /transactions - adds a new transaction
+    //      POST /transactions - adds a new transaction
     @PostMapping
     public ResponseEntity<Transaction> createTransaction(@RequestBody Transaction givenTransaction) {
         return transactionService.createTransaction(givenTransaction);
     }
 
-//    PUT  /transactions/{id} - replaces the transaction with id
+    //    PUT  /transactions/{id} - replaces the transaction with id
     @PutMapping("/{id}")
     public ResponseEntity<Transaction> updateTransactionDataById(@PathVariable Integer id,
                                                                  @RequestBody Transaction givenTransaction) {
         return transactionService.updateTransactionDataById(id, givenTransaction);
     }
 
-//    DELETE /transactions/{id} - deletes the transaction with id
+    //    DELETE /transactions/{id} - deletes the transaction with id
     @DeleteMapping("/{id}")
     public ResponseEntity<Transaction> deleteTransactionById(@PathVariable Integer id) {
         return transactionService.deleteTransactionById(id);
